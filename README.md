@@ -1,37 +1,31 @@
-# 码志
+# 使用说明
 
-我的个人博客：<https://mazhuang.org>，欢迎 Star 和 Fork。
+博客模板源自https://github.com/mzlogin/mzlogin.github.io，ReadMe十分清晰，可直接查看修改
 
 ## 概览
 
 <!-- vim-markdown-toc GFM -->
 
-* [效果预览](#效果预览)
+<!-- * [效果预览](#效果预览)
 * [Fork 指南](#fork-指南)
 * [使用文档](#使用文档)
 * [经验与思考](#经验与思考)
 * [联系我](#联系我)
-* [致谢](#致谢)
+* [致谢](#致谢) -->
 
 <!-- vim-markdown-toc -->
 
-## 效果预览
+<!-- ## 效果预览
 
 **[在线预览 &rarr;](https://mazhuang.org)**
 
-![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png)
+![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png) -->
 
-## Fork 指南
+<!-- ## Fork 指南
 
 Fork 本项目之后，还需要做一些事情才能让你的页面「正确」跑起来。
 
-1. 正确设置项目名称与分支。
 
-   按照 GitHub Pages 的规定，名称为 `username.github.io` 的项目的 master 分支，或者其它名称的项目的 gh-pages 分支可以自动生成 GitHub Pages 页面。
-
-2. 修改域名。
-
-   如果你需要绑定自己的域名，那么修改 CNAME 文件的内容；如果不需要绑定自己的域名，那么删掉 CNAME 文件。
 
 3. 修改配置。
 
@@ -52,15 +46,15 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 5. 修改「关于」页面。
 
-   pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
+   pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。 -->
 
-## 使用文档
+<!-- ## 使用文档
 
 - [本博客模板常见问题 Q & A](https://mazhuang.org/2020/05/03/blog-template-qna/)。
 
-- 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
+- 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。 -->
 
-## 经验与思考
+<!-- ## 经验与思考
 
 * 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
 
@@ -74,7 +68,7 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 * 杜绝难断句、难理解的长句子，如果不能将其拆分成几个简洁的短句，说明脑中的理解并不清晰。
 
-* 可以学习一下那些高质量的博主，他们的行文，内容组织方式，有什么值得借鉴的地方。
+* 可以学习一下那些高质量的博主，他们的行文，内容组织方式，有什么值得借鉴的地方。 -->
 
 ## 联系我
 
