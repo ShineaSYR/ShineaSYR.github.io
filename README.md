@@ -1,6 +1,6 @@
 # 使用说明
 
-博客模板源自https://github.com/mzlogin/mzlogin.github.io，ReadMe十分清晰，可直接查看修改
+博客模板源自[https://github.com/mzlogin/mzlogin.github.io](https://github.com/mzlogin/mzlogin.github.io)，ReadMe十分清晰，可直接查看修改
 
 ## 概览
 
