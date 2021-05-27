@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如何写figma插件——从零开始
-categories: [plugin, figma]
+categories: [plugin]
 description: 从零开始，创建一个官方的figma插件，figma的“Hello Word”。
 keywords: figma, plugin
 ---
