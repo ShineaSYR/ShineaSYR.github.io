@@ -98,6 +98,6 @@ keywords: max-width, css, ellipsis
 
 **参考数据**
 css-quiz-9图片如下所示
-<img src="../assets/images/samrt_ellipsis001.png" width="400px;">
+<img src="{{ site.url }}/assets/images/samrt_ellipsis001.png" width="400px;">
 紧贴效果示意图片如下所示
-![紧贴效果示意](../assets/images/samrt_ellipsis002.png)
+![紧贴效果示意]({{ site.url }}/assets/images/samrt_ellipsis002.png)
