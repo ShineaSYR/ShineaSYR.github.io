@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 新电脑第一步
-categories: [other]
+categories: [Other]
 description: 总结归纳新电脑新机器需要安装的前端环境。
 keywords: VSCode Plugins, Computer, IDE, Download
 ---
