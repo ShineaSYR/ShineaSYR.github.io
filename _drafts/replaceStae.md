@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 使用replaceState提升用户体验
-categories: [cate1, cate2]
-description: some word here
-keywords: keyword1, keyword2
+categories: [Javascript]
+description: 通过replaceState改善多次点击重复的问题
+keywords: replaceState, 用户体验
 ---
 
 很早之前做过一个[网站](https://www.ncmchina.com/collections.html)，里面有个作品列表，是通过URL里的参数变更展示不同的数据信息。
@@ -27,7 +27,9 @@ href每次跳转都会在当前的历史记录里新增一条记录，有点类�
 
 
 
-<!-- **问题场景复现：** 假设用户从作品列表页面（[collections](https://www.ncmchina.com/collections.html)）点击跳转到页面详情页（[workTemplate](https://www.ncmchina.com/workTemplate.html?id=75)），TA切换查看了15部作品详情后，现在TA希望点击浏览器的返回到作品列表页面，TA需要点击15次才能回到作品列表。类似场景则可以通过`replaceState`提升用户体验，（此处不考虑其他埋点等因素～）。 -->
+**问题场景复现：** 假设用户从作品列表页面（[collections](https://www.ncmchina.com/collections.html)）点击跳转到页面详情页（[workTemplate](https://www.ncmchina.com/workTemplate.html?id=75)），TA切换查看了15部作品详情后，现在TA希望点击浏览器的返回到作品列表页面，TA需要点击15次才能回到作品列表。类似场景则可以通过`replaceState`提升用户体验，（此处不考虑其他埋点等因素～）。
+
+可以点击demo自行访问体验，具体效果可参考下方GIF点击
 
 那如何科学使用replaceState实现无刷新切换呢？接下来将有详细内容展开～～～
 
@@ -42,16 +44,34 @@ history.replaceState(stateObj, title, [url])
 
 接下来将描述如何解决最初说的“需要点击多次返回体验”提升问题。
 
-* 先有一个方法`getWorkInfos(id)`，根据id来获取作品详情的所有信息；
-* 对左侧的作品列表添加click事件。
-
 下方为核心代码内容
+```html
+<h3>优化后的方式-replace替换</h3>
+<p class="jsRepalceTxt">当前为默认数据</p>
+<div class="jsLink">
+  <a class="page-link" href="?id=1">id =1</a>
+  <a class="page-link" href="?id=2">id =2</a>
+  <a class="page-link" href="?id=3">id =3</a>
+  <a class="page-link" href="?id=4">id =4</a>
+</div>
+```
 ```javascript
-function getWorkInfos(id) {}
-
-document.querySelectorAll('').
-
-
+var allDatainfo = ['id为1时，展示的内容', 'id为2时，展示的内容', 'id为3时，展示的内容', 'id为4时，展示的内容'];
+var allLinks = document.querySelector('.jsLink');
+var jsRepalceTxt = document.querySelector('.jsRepalceTxt');
+allLinks.addEventListener('click', function (e) {
+  e.preventDefault();
+  var el = e.target;
+  if (el && el.getAttribute('href') ) {
+    var currId = parseInt(el.getAttribute('href').split("id=")[1]);
+    jsRepalceTxt.innerText = allDatainfo[currId - 1];
+    if (history.replaceState) {
+      history.replaceState(null, document.title, location.href.replace(/id=\d+/, 'id=' + currId));
+    } else {
+      window.location.herf = window.location.herf.replace(/id=\d+/, 'id=' + currId);
+    }
+  }
+});
 ```
 
 
