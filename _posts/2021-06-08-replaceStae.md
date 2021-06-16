@@ -11,6 +11,7 @@ keywords: replaceState, 用户体验
 原本实现的href跳转到`?id=XX`，该方案在频繁切换作品后，希望通过点击返回上一层时（未切换作品之前），需要点击许多次。
 
 优化后的效果可以观看下方的视频录制，或点击[网站](https://www.ncmchina.com/collections.html)自行体验。
+<video width="100%" src="{{ site.url }}/assets/images/replaceState.mp4"></video>
 
 <!-- <iframe  width=100% src="imgs/replaceState.mp4"> -->
 
@@ -29,7 +30,9 @@ href每次跳转都会在当前的历史记录里新增一条记录，有点类�
 
 **问题场景复现：** 假设用户从作品列表页面（[collections](https://www.ncmchina.com/collections.html)）点击跳转到页面详情页（[workTemplate](https://www.ncmchina.com/workTemplate.html?id=75)），TA切换查看了15部作品详情后，现在TA希望点击浏览器的返回到作品列表页面，TA需要点击15次才能回到作品列表。类似场景则可以通过`replaceState`提升用户体验，（此处不考虑其他埋点等因素～）。
 
-可以点击demo自行访问体验，具体效果可参考下方GIF点击
+可以点击demo，[githubPage](https://shineasyr.github.io/FELearning/repalceState.html?id=1)自行访问体验，具体效果可参考下方GIF点击
+[优化前后对比]({{ site.url }}/assets/images/replaceState.gif)
+
 
 那如何科学使用replaceState实现无刷新切换呢？接下来将有详细内容展开～～～
 
@@ -42,9 +45,7 @@ history.replaceState(stateObj, title, [url])
 ```
 其中url参数限制必须为同源，否则会抛出异常。未设定时仍为当前的url。
 
-接下来将描述如何解决最初说的“需要点击多次返回体验”提升问题。
-
-下方为核心代码内容
+上方的demo，核心代码见下方～
 ```html
 <h3>优化后的方式-replace替换</h3>
 <p class="jsRepalceTxt">当前为默认数据</p>
@@ -68,17 +69,12 @@ allLinks.addEventListener('click', function (e) {
     if (history.replaceState) {
       history.replaceState(null, document.title, location.href.replace(/id=\d+/, 'id=' + currId));
     } else {
+      // 属性不兼容则降级体验
       window.location.herf = window.location.herf.replace(/id=\d+/, 'id=' + currId);
     }
   }
 });
 ```
-
-
-
-
-
-
 
 ## 参考文章
 * [SPA 路由三部曲之核心原理](https://zhuanlan.zhihu.com/p/348764966)
