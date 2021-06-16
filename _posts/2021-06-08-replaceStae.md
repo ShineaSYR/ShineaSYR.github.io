@@ -11,7 +11,7 @@ keywords: replaceState, 用户体验
 原本实现的href跳转到`?id=XX`，该方案在频繁切换作品后，希望通过点击返回上一层时（未切换作品之前），需要点击许多次。
 
 优化后的效果可以观看下方的视频录制，或点击[网站](https://www.ncmchina.com/collections.html)自行体验。
-<video width="100%" src="{{ site.url }}/assets/images/replaceState.mp4"></video>
+<video controls width="100%" src="{{ site.url }}/assets/images/replaceState.mp4"></video>
 
 <!-- <iframe  width=100% src="imgs/replaceState.mp4"> -->
 
