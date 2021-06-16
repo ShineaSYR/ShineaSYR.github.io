@@ -31,7 +31,7 @@ href每次跳转都会在当前的历史记录里新增一条记录，有点类�
 **问题场景复现：** 假设用户从作品列表页面（[collections](https://www.ncmchina.com/collections.html)）点击跳转到页面详情页（[workTemplate](https://www.ncmchina.com/workTemplate.html?id=75)），TA切换查看了15部作品详情后，现在TA希望点击浏览器的返回到作品列表页面，TA需要点击15次才能回到作品列表。类似场景则可以通过`replaceState`提升用户体验，（此处不考虑其他埋点等因素～）。
 
 可以点击demo，[githubPage](https://shineasyr.github.io/FELearning/repalceState.html?id=1)自行访问体验，具体效果可参考下方GIF点击
-[优化前后对比]({{ site.url }}/assets/images/replaceState.gif)
+![优化前后对比]({{ site.url }}/assets/images/replaceState.gif)
 
 
 那如何科学使用replaceState实现无刷新切换呢？接下来将有详细内容展开～～～
