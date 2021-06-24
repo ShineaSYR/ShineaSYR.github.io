@@ -21,10 +21,12 @@ keywords: 云函数, serverless、企业微信
 ![成功创建机器人]({{ site.url }}/assets/images/wechat_webhook002.png)
 ## 配置云函数
 1.登录[腾讯云](https://cloud.tencent.com/)。此处默认大家已有腾讯云账号（若无，直接使用微信登录+实名认证+服务分配即可）
+
 2.进入[云函数模块](https://serverless.cloud.tencent.com/start?c=scf)，选择一个函数模板，创建一个函数服务。
 
 ![选定一个函数模板]({{ site.url }}/assets/images/wechat_webhook003.png)
 3.函数服务配置。基础配置可按照提示进行修改，点击完成，函数创建成果，此时会默认部署默认的HelloWorld代码，并跳转到工作台。
+
 4.函数服务-添加代码。点击左侧的【函数管理】，选择函数代码tab选项卡，里面出现了代码编辑区域，可以看到之前默认的代码为“已部署”状态。
 
 ![添加代码]({{ site.url }}/assets/images/wechat_webhook004.png)
@@ -101,7 +103,7 @@ function dateFormat (options) {
 }
 ```
 添加后点击部署，代码即可部署成功，可以点击测试按钮，此时群里会有一个消息提示。
-4.函数服务创建触发器。点击左侧的【触发管理】-【创建触发器】，在弹出框里修改相应设定，一般触发周期选择「自定义触发周期」，根据提示（[Cron相关文档](https://cloud.tencent.com/document/product/583/9708#cron-.E8.A1.A8.E8.BE.BE.E5.BC.8F)）填写「Cron表达式」
+5.函数服务创建触发器。点击左侧的【触发管理】-【创建触发器】，在弹出框里修改相应设定，一般触发周期选择「自定义触发周期」，根据提示（[Cron相关文档](https://cloud.tencent.com/document/product/583/9708#cron-.E8.A1.A8.E8.BE.BE.E5.BC.8F)）填写「Cron表达式」
 
 ![创建触发器]({{ site.url }}/assets/images/wechat_webhook005.png)
 
