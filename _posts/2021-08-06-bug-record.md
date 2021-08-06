@@ -19,7 +19,8 @@ keywords: bug
 目前猜测是在canvas绘制的时候，将原素材的旋转信息丢失了。然后后端在绘制的时候，又依旧原图的高度来创建，此时尾部就出现了黑色。且图片旋转倒置了。
 
 PS： 原始图片素材，会有[exif信息]()，包含[Orientation参数](https://hkzww.com/%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E6%97%8B%E8%BD%AC%E9%97%AE%E9%A2%98.html)，图片经过第三方软件处理or传输，基本上会丢失旋转信息。
+
 **附件：**
-[素材原图1]({{ site.url }}/assets/images/bugrecord_pic_rotateinfo002.HEIC)
-[素材原图1]({{ site.url }}/assets/images/bugrecord_pic_rotateinfo003.HEIC)
+![素材原图1]({{ site.url }}/assets/images/bugrecord_pic_rotateinfo002.HEIC)
+![素材原图1]({{ site.url }}/assets/images/bugrecord_pic_rotateinfo003.HEIC)
 
