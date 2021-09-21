@@ -5,7 +5,7 @@ categories: [Javascript]
 description: 通过一些方法来判断浏览器的情况，IE、Safari、Mobile Phone、
 keywords: keyword1, keyword2
 ---
-
+>项目中经常需要的对不同浏览器做相应处理，此次简单归纳了js和css的方法。
 ## JS
 ### IE
 ``` javascript
