@@ -27,6 +27,7 @@ HSL即色相、饱和度、亮度（英语：Hue, Saturation, Lightness）。
 ![HSL2RGB]({{ site.url }}/assets/images/color-exchange002.png)
 
 ## 模式转换
+代码部分有借鉴张鑫旭张老师的LuLu UI里面的代码片段，👉[点击查看链接](https://github.com/yued-fe/lulu/blob/master/theme/edge/js/common/ui/Color.js)
 ### RGB&HEX
 ```javascript
 // rgb/rgba颜色转hex
@@ -78,6 +79,7 @@ function cHexToRgb (hex) {
 ```
 ### RGB&HSL
 > PS：原理可以参考概念里面的介绍
+
 ### HEX&HSL
 
 ```javascript
